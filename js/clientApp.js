@@ -5,17 +5,23 @@
 			render: function() {
 				return (
 					div(null, 
-						h1(null, 'check out this component')
+						h1({style: {color: this.props.color}}, this.props.title)
 					)
 				) 
 			}
 		})
 
+		var myTitleFactory = React.createFactory(myTitle)
+
 		var myFirstComponent = React.createClass({
 			render: function() {
 				return (
 					div(null, 
-						React.createElement(myTitle)
+						myTitleFactory({title: "It\'s the first line", color: 'peru'}),
+						myTitleFactory({title: 'This is a title prop', color: 'orange'}),
+						myTitleFactory({title: 'Oh, ok', color: 'papayawhip'}),
+						myTitleFactory({title: 'Here is another one', color: 'rebeccapurple'}),
+						myTitleFactory({title: 'and last, but not least', color: 'pink'})
 					)
 				)
 			}
