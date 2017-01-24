@@ -9,7 +9,9 @@
     "lint": "eslint js/**/*.js webpack.config.js",
     "build": "webpack",
     "dev": "webpack-dev-server",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "test": "NODE_ENV=test jest",
+    "cover": "npm run test -- --cover"
   },
   "dependencies": {
     "axios": "0.15.2",
