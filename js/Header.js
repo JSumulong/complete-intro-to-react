@@ -4,7 +4,7 @@ import { Link }from 'react-router'
 class Header extends React.Component {
 	render () {
 		let utilSpace
-		if(this.props.showSearch){
+		if (this.props.showSearch){
 			utilSpace = <input onChange={this.props.handleSearchTermChange} value={this.props.searchTerm} type='text' placeholder='Search'/>
 		} else {
 			utilSpace = (
